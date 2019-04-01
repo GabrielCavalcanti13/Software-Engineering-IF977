@@ -1,7 +1,10 @@
 module FunWithStrings
     def palindrome?
-      ######
+      if self.downcase == self.downcase.reverse
+        return true
+      return false
     end
+
     def count_words
       words = {}
       self.downcase.split.each do |word|
@@ -10,9 +13,12 @@ module FunWithStrings
         else
             words[word] = 0
         end
+      end
+        return words
     end
+
     def anagram_groups
-      # your code here
+      ######
     end
   end
   
