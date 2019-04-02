@@ -1,7 +1,13 @@
+# Author: Gabriel Cavalcanti 
+# email: gcm2@cin.ufpe.br
+# date: 31-mar-2019
+
 module FunWithStrings
     def palindrome?
-      if self.downcase == self.downcase.reverse
+      if self.downcase.gsub(/[^a-z]/,"")==
+        self.downcase.reverse.gsub(/[^a-z]/,"")
         return true
+      end
       return false
     end
 
@@ -11,10 +17,10 @@ module FunWithStrings
         if words.has_key?(word)
             words[word] += 1
         else
-            words[word] = 0
+            words[word] = 1
         end
       end
-        return words
+      return words
     end
 
     def anagram_groups

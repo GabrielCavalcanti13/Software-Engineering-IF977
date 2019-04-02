@@ -1,7 +1,11 @@
+# Author: Gabriel Cavalcanti 
+# email: gcm2@cin.ufpe.br
+# date: 01-apr-2019
+
 class Dessert
   def initialize(name, calories)
     @name = name
-    @calorie = calorie
+    @calories = calories
   end
   def name
     @name
@@ -16,8 +20,9 @@ class Dessert
     @calories = calories
   end
   def healthy?
-    if @calorie < 200
+    if @calories < 200
       return true
+    end
     return false
   end
   def delicious?
